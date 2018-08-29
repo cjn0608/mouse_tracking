@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="laser_frame" default="hokuyo_link"/>
+    <arg name="speed_topic" default="cmd_vel"/>
+<!--    <arg name="laser_frame" default="laserscan_frame"/>
+    <arg name="speed_topic" default="/cmd_vel_mux/input/navi"/>-->
+    <node pkg="ros_node" type="ros_node" name="ros_node_node" output="screen">
+        <param name="laser_frame" value="$(arg laser_frame)"/>
+        <param name="speed_topic" value="$(arg speed_topic)"/>
+    </node>
+</launch>
